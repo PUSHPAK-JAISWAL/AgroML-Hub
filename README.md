@@ -27,9 +27,8 @@ models/           # Trained model files and scripts
   notebooks/        # Jupyter notebooks for EDA, training, and analysis
   datasets/         # Contains mushroom, forest, seed datasets
   server/           # Server Code, consist of Fastapi code for routers
-backend/          # (Planned) Spring Boot 
+backend/          # Spring Boot 
 frontend/         # (Planned) ReactJS frontend code
-requirements.txt  # Python dependencies
 README.md
 ```
 
