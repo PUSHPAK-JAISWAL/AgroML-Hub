@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/agroml
+
+  mail:
+    host: smtp.example.com
+    port: 587
+    username: your-smtp-user
+    password: your-smtp-password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+app:
+  jwt:
+    secret: CHANGE_ME_REALLY_SECRET_AND_LONG
+    expiration-ms: 3600000
+  fastapi:
+    base-url: http://localhost:8000
