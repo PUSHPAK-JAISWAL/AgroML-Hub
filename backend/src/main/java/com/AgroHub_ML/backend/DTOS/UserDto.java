@@ -10,9 +10,6 @@ import org.bson.types.ObjectId;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
-@RequiredArgsConstructor
-@AllArgsConstructor
 public class UserDto {
     private ObjectId id;
     private String email;

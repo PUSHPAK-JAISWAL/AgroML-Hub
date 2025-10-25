@@ -14,7 +14,6 @@ import java.util.Map;
 @Document(collection = "prediction_history")
 @AllArgsConstructor
 @RequiredArgsConstructor
-@NoArgsConstructor
 @Data
 public class PredictionHistory {
 

@@ -9,9 +9,6 @@ import lombok.RequiredArgsConstructor;
 import java.util.Map;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@RequiredArgsConstructor
 public class PredictionRequest {
     @NotNull
     private String modelPath;
