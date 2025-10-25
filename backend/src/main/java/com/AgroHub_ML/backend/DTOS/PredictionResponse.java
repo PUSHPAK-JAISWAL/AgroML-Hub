@@ -8,9 +8,6 @@ import lombok.RequiredArgsConstructor;
 import java.util.Map;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@RequiredArgsConstructor
 public class PredictionResponse {
     private Map<String,Object> result;
 }

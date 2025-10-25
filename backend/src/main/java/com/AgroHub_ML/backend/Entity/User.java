@@ -10,11 +10,11 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
+import java.util.Set;
 
 @Document(collection = "users")
 @AllArgsConstructor
 @RequiredArgsConstructor
-@NoArgsConstructor
 @Data
 public class User {
 
@@ -22,5 +22,5 @@ public class User {
     private ObjectId id;
     private String email;
     private String password;
-    private List<String> roles;
+    private Set<String> roles;
 }

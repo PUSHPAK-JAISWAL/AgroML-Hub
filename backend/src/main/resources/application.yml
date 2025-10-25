@@ -4,23 +4,25 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/agroml
+      uri: mongodb+srv://pushpakmjaiswal:Jaiswalpm%4026@cluster0.tjonnlq.mongodb.net/agroml?appName=Cluster0
 
   mail:
-    host: smtp.example.com
+    host: smtp.gmail.com
     port: 587
-    username: your-smtp-user
-    password: your-smtp-password
+    username: pushpakmjaiswal@gmail.com
+    password: bsvd ytem slde qsxw
     properties:
       mail:
         smtp:
           auth: true
           starttls:
             enable: true
+          localhost: localhost
+          from: pushpakmjaiswal@gmail.com
 
 app:
   jwt:
-    secret: CHANGE_ME_REALLY_SECRET_AND_LONG
+    secret: AmbUrBYyJUbFJcGpbfPzz2ipdibr-ajtNGK3sRV2xUuj3aYzxx96_wHqnf3YKaRCwQnLAAQIu0GgXcLHNzUQvA
     expiration-ms: 3600000
   fastapi:
     base-url: http://localhost:8000
