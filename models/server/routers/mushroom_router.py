@@ -24,6 +24,10 @@ import tensorflow as tf
 
 from sklearn.preprocessing import LabelEncoder
 
+from pathlib import Path
+
+CURRENT_FILE_DIR = Path(__file__).resolve().parent
+
 router = APIRouter(prefix="/mushroom", tags=["mushroom"])
 
 # ---------------------------
@@ -140,10 +144,10 @@ class MappingsUpdate(BaseModel):
 # ---------------------------
 # Model paths (adjust if required)
 # ---------------------------
-RF_PATH = 'E:/AgroML_Hub/models/scikit_models/random_mushrooms_model.pkl'
-XGB_PATH =  'E:/AgroML_Hub/models/xgboost_models/xgboost_mushrooms_complete.pkl'
-TF_PATH =  'E:/AgroML_Hub/models/tensorflow_models/mushroom_model.keras'
-TFLITE_PATH =  'E:/AgroML_Hub/models/tensorflow_quantized_model/mushroom_model_quantized.tflite'
+RF_PATH = CURRENT_FILE_DIR/'../../scikit_models/random_mushrooms_model.pkl'
+XGB_PATH =  CURRENT_FILE_DIR/'../../xgboost_models/xgboost_mushrooms_complete.pkl'
+TF_PATH =  CURRENT_FILE_DIR/'../../tensorflow_models/mushroom_model.keras'
+TFLITE_PATH =  CURRENT_FILE_DIR/'../../tensorflow_quantized_model/mushroom_model_quantized.tflite'
 
 # ---------------------------
 # Load helpers + logs

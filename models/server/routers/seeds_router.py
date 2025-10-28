@@ -23,6 +23,9 @@ import os
 import numpy as np
 import tensorflow as tf
 import pandas as pd
+from pathlib import Path
+
+CURRENT_FILE_DIR = Path(__file__).resolve().parent
 
 router = APIRouter(prefix="/seeds", tags=["seeds"])
 
@@ -86,10 +89,10 @@ class MappingsUpdate(BaseModel):
 # Model file paths (adjust if needed)
 # ---------------------------
 # By default look for models under ./models/...
-RF_PATH = 'E:/AgroML_Hub/models/scikit_models/random_Seeds_model.pkl'
-XGB_PATH =  'E:/AgroML_Hub/models/xgboost_models/xgboost_wheat_seeds_complete.pkl'
-TF_PATH =  'E:/AgroML_Hub/models/tensorflow_models/seeds_model.keras'
-TFLITE_PATH =  'E:/AgroML_Hub/models/tensorflow_quantized_model/seeds_model_quantized.tflite'
+RF_PATH = CURRENT_FILE_DIR/'../../scikit_models/random_Seeds_model.pkl'
+XGB_PATH =  CURRENT_FILE_DIR/'../../xgboost_models/xgboost_wheat_seeds_complete.pkl'
+TF_PATH =  CURRENT_FILE_DIR/'../../tensorflow_models/seeds_model.keras'
+TFLITE_PATH =  CURRENT_FILE_DIR/'../../tensorflow_quantized_model/seeds_model_quantized.tflite'
 
 # No scaler by default
 SCALER_PATH = None
