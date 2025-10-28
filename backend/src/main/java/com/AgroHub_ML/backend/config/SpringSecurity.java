@@ -36,6 +36,7 @@ public class SpringSecurity {
         return auth.getAuthenticationManager();
     }
 
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.authorizeHttpRequests(request-> request
                 .requestMatchers("/public/**","/auth/**").permitAll()

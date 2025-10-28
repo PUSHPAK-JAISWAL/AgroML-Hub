@@ -1,12 +1,10 @@
 package com.AgroHub_ML.backend.Entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 import java.util.Map;
@@ -15,11 +13,12 @@ import java.util.Map;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Data
+@Builder
 public class PredictionHistory {
 
     @Id
     private ObjectId id;
-    private String userId;
+    private ObjectId userId;
     private String endpoint;
     private Map<String,Object> input;
     private Map<String,Object> response;
