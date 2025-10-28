@@ -23,6 +23,9 @@ import os
 import numpy as np
 import tensorflow as tf
 import pandas as pd
+from pathlib import Path
+
+CURRENT_FILE_DIR = Path(__file__).resolve().parent
 
 router = APIRouter(prefix="/forest", tags=["forest"])
 
@@ -143,10 +146,10 @@ class MappingsUpdate(BaseModel):
 # ---------------------------
 # Model file paths (absolute, computed from project root)
 # ---------------------------
-RF_PATH = 'E:/AgroML_Hub/models/scikit_models/random_forest_model.pkl'
-XGB_PATH =  'E:/AgroML_Hub/models/xgboost_models/xgboost_forest_model.pkl'
-TF_PATH =  'E:/AgroML_Hub/models/tensorflow_models/forest_cover_model.keras'
-TFLITE_PATH =  'E:/AgroML_Hub/models/tensorflow_quantized_model/forest_cover_model_quantized.tflite'
+RF_PATH = CURRENT_FILE_DIR/'../../scikit_models/random_forest_model.pkl'
+XGB_PATH =  CURRENT_FILE_DIR/'../../xgboost_models/xgboost_forest_model.pkl'
+TF_PATH =  CURRENT_FILE_DIR/'../../tensorflow_models/forest_cover_model.keras'
+TFLITE_PATH =  CURRENT_FILE_DIR/'../../tensorflow_quantized_model/forest_cover_model_quantized.tflite'
 
 # We don't have a scaler for now
 SCALER_PATH = None
