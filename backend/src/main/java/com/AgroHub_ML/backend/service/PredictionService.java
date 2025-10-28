@@ -48,10 +48,10 @@ public class PredictionService {
 
         try {
             String subject = "Your prediction result is ready";
-            String emailBody = "Hello,\n\nYour prediction for endpoint "+ suffix +" finished. Result: \n"+body;
-            emailService.sendPredictionEmail(userEmail,subject,emailBody);
+            // Use the new HTML report sender (expects input map + results map)
+            emailService.sendPredictionReport(userEmail, subject, payload, body);
         } catch (Exception ex) {
-            //log error; don't fail
+            // keep behavior: swallow/send error (don't fail prediction). optionally log.
         }
         return body;
     }
