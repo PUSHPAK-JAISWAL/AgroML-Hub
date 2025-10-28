@@ -1,15 +1,15 @@
 package com.AgroHub_ML.backend.DTOS;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
+@RequiredArgsConstructor
 public class AuthResponse {
 
+    @NonNull
     private String token;
+
     private String tokenType = "Bearer";
 
 }

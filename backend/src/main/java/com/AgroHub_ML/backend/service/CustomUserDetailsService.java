@@ -2,6 +2,8 @@ package com.AgroHub_ML.backend.service;
 
 import com.AgroHub_ML.backend.Entity.User;
 import com.AgroHub_ML.backend.Repositories.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,8 +12,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 @Service
+@RequiredArgsConstructor
 public class CustomUserDetailsService implements UserDetailsService {
 
+    @Autowired
     private UserRepository userRepository;
 
     @Override

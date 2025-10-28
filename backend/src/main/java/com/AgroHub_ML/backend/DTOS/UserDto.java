@@ -8,10 +8,11 @@ import lombok.RequiredArgsConstructor;
 import org.bson.types.ObjectId;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 public class UserDto {
     private ObjectId id;
     private String email;
-    private List<String> roles;
+    private Set<String> roles;
 }
