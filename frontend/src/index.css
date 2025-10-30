@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 32 20% 98%;
+    --foreground: 145 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 145 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 145 30% 15%;
+
+    --primary: 145 60% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 80% 55%;
+    --secondary-foreground: 145 30% 15%;
+
+    --muted: 32 15% 92%;
+    --muted-foreground: 145 10% 45%;
+
+    --accent: 145 50% 92%;
+    --accent-foreground: 145 60% 25%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 145 15% 88%;
+    --input: 145 15% 88%;
+    --ring: 145 60% 25%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(145 60% 25%) 0%, hsl(145 50% 35%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(32 20% 98%) 100%);
+    --shadow-soft: 0 2px 8px hsl(145 30% 15% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(145 30% 15% / 0.12);
+  }
+
+  .dark {
+    --background: 145 25% 8%;
+    --foreground: 32 20% 95%;
+
+    --card: 145 20% 12%;
+    --card-foreground: 32 20% 95%;
+
+    --popover: 145 20% 12%;
+    --popover-foreground: 32 20% 95%;
+
+    --primary: 145 55% 45%;
+    --primary-foreground: 145 30% 5%;
+
+    --secondary: 35 75% 60%;
+    --secondary-foreground: 145 30% 5%;
+
+    --muted: 145 15% 18%;
+    --muted-foreground: 32 10% 65%;
+
+    --accent: 145 40% 15%;
+    --accent-foreground: 145 55% 45%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 145 15% 20%;
+    --input: 145 15% 20%;
+    --ring: 145 55% 45%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(145 55% 45%) 0%, hsl(145 45% 35%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(145 20% 12%) 0%, hsl(145 15% 10%) 100%);
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
